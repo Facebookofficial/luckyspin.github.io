@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lucky Spin</title><script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <script src="https://leaverou.github.io/conic-gradient/conic-gradient.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body><h1>You can use only once</h1>
+       <div id="wheel"></div> 
+       <h2>&uarr;</h2>
+    <button onclick="spin()">Spin</button>
+    <h3>You have to bet. If in this lucky spin your Selected color will come so you can get our reward which is Diamond (How many it depends on your luck ) </h3>
+    <p><br><br>
+    I bet on color :<select value="red">
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="skyblue">Sky Blue</option>
+        <option value="darkblue">Dark Blue</option>
+        <option value="purple">Purple</option>
+        <option value="pink">Pink</option>
+    </select></p>
+    <script>
+    	var rndAngle
+x="skyblue,green,yellow,orange,red,pink,purple,darkblue".split(",")
+var count =1
+window.onload=function(){
+var wheel=document.getElementById("wheel")}
+function spin(){
+    rndAngle=((Math.floor(Math.random()*8)*(45))-22.5)+1440*count
+    count++
+    wheel.style.transform="rotate("+rndAngle+"deg)"
+    if((x[Math.abs(((rndAngle+22.5)/22.5)%16)/2])==document.getElementsByTagName("select")[0].value){
+        setTimeout(function(){alert("Wow you win 10 diamonds")},1900)
+    }
+}
+
+    </script>
+    </body>
+</html>
